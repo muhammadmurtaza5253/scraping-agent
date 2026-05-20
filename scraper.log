@@ -1,0 +1,179 @@
+[INFO] 22:59:29 — URL received: https://api_key = os.environ.get("ANTHROPIC_API_KEY") | Page limit: 10
+[INFO] 22:59:29 — Fetching https://api_key = os.environ.get("ANTHROPIC_API_KEY") ...
+[ERROR] 22:59:30 — Failed to fetch https://api_key = os.environ.get("ANTHROPIC_API_KEY"): HTTPSConnectionPool(host='api_key%20=%20os.environ.get(%22anthropic_api_key%22)', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("HTTPSConnection(host='api_key%20=%20os.environ.get(%22anthropic_api_key%22)', port=443): Failed to resolve 'api_key%20=%20os.environ.get(%22anthropic_api_key%22)' ([Errno 8] nodename nor servname provided, or not known)"))
+[INFO] 22:59:41 — URL received: https://openlibrary.org/search?q=ddc%3A8%2A+first_publish_year%3A%5B%2A+TO+1950%5D+publish_year%3A%5B2000+TO+%2A%5D+NOT+public_scan_b%3Afalse+language%3Aeng+-subject%3A%22content_warning%3Acover%22+-subject%3A%22content_warning%3Acover%22&sort=trending | Page limit: 10
+[INFO] 22:59:41 — Fetching https://openlibrary.org/search?q=ddc%3A8%2A+first_publish_year%3A%5B%2A+TO+1950%5D+publish_year%3A%5B2000+TO+%2A%5D+NOT+public_scan_b%3Afalse+language%3Aeng+-subject%3A%22content_warning%3Acover%22+-subject%3A%22content_warning%3Acover%22&sort=trending ...
+[INFO] 22:59:41 — Received 23,663 bytes (status 200)
+[INFO] 22:59:46 — Sending HTML to LLM for analysis (~4,272 tokens)...
+[INFO] 22:59:55 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 22:59:55 — Analysis saved to analysis.json | Page type: verification_wall | Items: 1
+[INFO] 23:00:59 — URL received: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX | Page limit: 10
+[INFO] 23:00:59 — Fetching https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX ...
+[INFO] 23:01:00 — Received 1,805,117 bytes (status 200)
+[WARNING] 23:01:01 — HTML too large (146,362 chars). Truncating to ~80,000 chars.
+[INFO] 23:01:08 — Sending HTML to LLM for analysis (~20,284 tokens)...
+[INFO] 23:01:31 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:01:31 — Analysis saved to analysis.json | Page type: search_results | Items: 20
+[INFO] 23:01:58 — Generating scraper code...
+[INFO] 23:02:39 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:02:39 — Scraper saved to scraper.py
+[INFO] 23:02:39 — Starting scraper (target: 10 pages)...
+[INFO] 23:27:17 — URL received: http://books.toscrape.com | Page limit: 2
+[INFO] 23:27:17 — Fetching http://books.toscrape.com ...
+[INFO] 23:27:17 — Received 51,294 bytes (status 200)
+[INFO] 23:27:17 — Sending HTML to LLM for analysis (~6,775 tokens)...
+[INFO] 23:27:29 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:27:29 — Analysis saved to analysis.json | Page type: product listing | Items: 20
+[INFO] 23:27:29 — Generating scraper code...
+[INFO] 23:28:02 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:28:02 — Scraper saved to scraper.py
+[INFO] 23:28:02 — Starting scraper (target: 2 pages)...
+2026-05-19 23:28:02,956 [DEBUG] CSV header written.
+2026-05-19 23:28:02,956 [INFO] Fetching page 1: http://books.toscrape.com/
+2026-05-19 23:28:03,180 [INFO] Fetched URL: http://books.toscrape.com/ | Status: 200
+2026-05-19 23:28:03,220 [INFO] Page 1: 20 items found.
+2026-05-19 23:28:03,220 [INFO] Page 1: 20 rows written. Running total: 20.
+2026-05-19 23:28:03,221 [DEBUG] Progress saved: last_page_completed=1, total_rows=20
+2026-05-19 23:28:03,226 [INFO] Sleeping 1.32s before next request...
+2026-05-19 23:28:04,549 [INFO] Fetching page 2: http://books.toscrape.com/catalogue/page-2.html
+2026-05-19 23:28:04,778 [INFO] Fetched URL: http://books.toscrape.com/catalogue/page-2.html | Status: 200
+2026-05-19 23:28:04,819 [INFO] Page 2: 20 items found.
+2026-05-19 23:28:04,819 [INFO] Page 2: 20 rows written. Running total: 40.
+2026-05-19 23:28:04,820 [DEBUG] Progress saved: last_page_completed=2, total_rows=40
+2026-05-19 23:28:04,825 [INFO] CSV file closed.
+2026-05-19 23:28:04,825 [INFO] Scraping finished. Total rows written: 40.
+[INFO] 23:34:20 — URL received: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX | Page limit: 10
+[INFO] 23:34:20 — Fetching https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX ...
+[INFO] 23:34:22 — Received 1,805,118 bytes (status 200)
+[WARNING] 23:34:22 — HTML too large (146,362 chars). Truncating to ~80,000 chars.
+[INFO] 23:34:26 — Sending HTML to LLM for analysis (~20,284 tokens)...
+[INFO] 23:34:46 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:34:46 — Analysis saved to analysis.json | Page type: search_results | Items: 20
+[INFO] 23:35:02 — Generating scraper code...
+[INFO] 23:35:43 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:35:43 — Scraper saved to scraper.py
+[INFO] 23:35:43 — Starting scraper (target: 10 pages)...
+2026-05-19 23:35:43,451 [INFO] Processing page 1/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX
+2026-05-19 23:35:44,463 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%20Medicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%20TX | Status: 200
+2026-05-19 23:35:44,536 [INFO] Page 1: found 20 provider cards.
+2026-05-19 23:35:44,537 [INFO] Page 1: wrote 20 new rows. Running total: 20
+2026-05-19 23:35:44,542 [INFO] Processing page 2/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=2
+2026-05-19 23:35:44,542 [INFO] Sleeping 1.18s before next request...
+2026-05-19 23:35:46,314 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=2 | Status: 200
+2026-05-19 23:35:46,392 [INFO] Page 2: found 20 provider cards.
+2026-05-19 23:35:46,393 [INFO] Page 2: wrote 20 new rows. Running total: 40
+2026-05-19 23:35:46,398 [INFO] Processing page 3/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=3
+2026-05-19 23:35:46,398 [INFO] Sleeping 1.95s before next request...
+2026-05-19 23:35:48,884 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=3 | Status: 200
+2026-05-19 23:35:48,969 [INFO] Page 3: found 20 provider cards.
+2026-05-19 23:35:48,970 [INFO] Page 3: wrote 20 new rows. Running total: 60
+2026-05-19 23:35:48,974 [INFO] Processing page 4/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=4
+2026-05-19 23:35:48,975 [INFO] Sleeping 1.88s before next request...
+2026-05-19 23:35:51,530 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=4 | Status: 200
+2026-05-19 23:35:51,612 [INFO] Page 4: found 20 provider cards.
+2026-05-19 23:35:51,613 [INFO] Page 4: wrote 20 new rows. Running total: 80
+2026-05-19 23:35:51,618 [INFO] Processing page 5/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=5
+2026-05-19 23:35:51,618 [INFO] Sleeping 1.01s before next request...
+2026-05-19 23:35:53,320 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=5 | Status: 200
+2026-05-19 23:35:53,400 [INFO] Page 5: found 20 provider cards.
+2026-05-19 23:35:53,401 [INFO] Page 5: wrote 20 new rows. Running total: 100
+2026-05-19 23:35:53,406 [INFO] Processing page 6/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=6
+2026-05-19 23:35:53,406 [INFO] Sleeping 1.37s before next request...
+2026-05-19 23:35:55,432 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=6 | Status: 200
+2026-05-19 23:35:55,501 [INFO] Page 6: found 20 provider cards.
+2026-05-19 23:35:55,501 [INFO] Page 6: wrote 20 new rows. Running total: 120
+2026-05-19 23:35:55,506 [INFO] Processing page 7/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=7
+2026-05-19 23:35:55,506 [INFO] Sleeping 1.38s before next request...
+2026-05-19 23:35:57,555 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=7 | Status: 200
+2026-05-19 23:35:57,632 [INFO] Page 7: found 20 provider cards.
+2026-05-19 23:35:57,632 [INFO] Page 7: wrote 20 new rows. Running total: 140
+2026-05-19 23:35:57,637 [INFO] Processing page 8/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=8
+2026-05-19 23:35:57,637 [INFO] Sleeping 1.40s before next request...
+2026-05-19 23:35:59,622 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=8 | Status: 200
+2026-05-19 23:35:59,701 [INFO] Page 8: found 20 provider cards.
+2026-05-19 23:35:59,702 [INFO] Page 8: wrote 20 new rows. Running total: 160
+2026-05-19 23:35:59,707 [INFO] Processing page 9/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=9
+2026-05-19 23:35:59,707 [INFO] Sleeping 1.86s before next request...
+2026-05-19 23:36:02,182 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=9 | Status: 200
+2026-05-19 23:36:02,254 [INFO] Page 9: found 20 provider cards.
+2026-05-19 23:36:02,255 [INFO] Page 9: wrote 20 new rows. Running total: 180
+2026-05-19 23:36:02,259 [INFO] Processing page 10/10: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=10
+2026-05-19 23:36:02,259 [INFO] Sleeping 1.49s before next request...
+2026-05-19 23:36:04,285 [INFO] Fetched URL: https://www.healthgrades.com/usearch?entityCode=PS305&searchType=PracticingSpecialty&what=Family%2BMedicine&pt=29.997%2C-95.6263&state=TX&where=Houston%2C%2BTX&pageNum=10 | Status: 200
+2026-05-19 23:36:04,376 [INFO] Page 10: found 20 provider cards.
+2026-05-19 23:36:04,377 [INFO] Page 10: wrote 20 new rows. Running total: 200
+2026-05-19 23:36:04,382 [INFO] CSV file closed.
+2026-05-19 23:36:04,382 [INFO] Scraping complete. Total rows written: 200
+[INFO] 23:40:45 — Starting scraper (target: 10 pages)...
+2026-05-19 23:40:45,165 [INFO] Resuming from page 11, total rows so far: 200
+2026-05-19 23:40:45,166 [INFO] Already completed all pages. Nothing to do.
+2026-05-19 23:40:45,166 [INFO] CSV file closed.
+[INFO] 23:40:53 — URL received: https://steamdb.info/sales/ | Page limit: 10
+[INFO] 23:40:53 — Fetching https://steamdb.info/sales/ ...
+[INFO] 23:40:53 — Received 30,721 bytes (status 403)
+[ERROR] 23:40:53 — HTTP 403 for https://steamdb.info/sales/
+[INFO] 23:43:09 — URL received: http://openlibrary.org/trending/now | Page limit: 10
+[INFO] 23:43:09 — Fetching http://openlibrary.org/trending/now ...
+[INFO] 23:43:10 — Received 89,972 bytes (status 200)
+[INFO] 23:43:12 — Sending HTML to LLM for analysis (~18,571 tokens)...
+[INFO] 23:43:27 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:43:27 — Analysis saved to analysis.json | Page type: trending/listing | Items: 19
+[INFO] 23:43:54 — Generating scraper code...
+[INFO] 23:44:29 — HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] 23:44:29 — Scraper saved to scraper.py
+[INFO] 23:44:29 — Starting scraper (target: 10 pages)...
+2026-05-19 23:44:29,393 [INFO] Starting Open Library trending books scraper.
+2026-05-19 23:44:29,395 [INFO] Appending to existing output CSV.
+2026-05-19 23:44:29,395 [INFO] Processing page 1/10: http://openlibrary.org/trending/now
+2026-05-19 23:44:30,505 [INFO] Fetched URL: http://openlibrary.org/trending/now | Status: 200
+2026-05-19 23:44:30,537 [INFO] Page 1: Found 20 items.
+2026-05-19 23:44:30,559 [INFO] Page 1: Wrote 20 new rows | Duplicates skipped: 0 | Running total: 20
+2026-05-19 23:44:30,559 [DEBUG] Progress saved: last_page_completed=1, total_rows=20
+2026-05-19 23:44:30,559 [DEBUG] Sleeping 1.99s before next page.
+2026-05-19 23:44:32,556 [INFO] Processing page 2/10: http://openlibrary.org/trending/now?page=2
+2026-05-19 23:44:33,003 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=2 | Status: 200
+2026-05-19 23:44:33,020 [WARNING] Page 2: No item container found (ul.list-books).
+2026-05-19 23:44:33,025 [DEBUG] Progress saved: last_page_completed=2, total_rows=20
+2026-05-19 23:44:33,025 [DEBUG] Sleeping 1.87s before next page.
+2026-05-19 23:44:34,904 [INFO] Processing page 3/10: http://openlibrary.org/trending/now?page=3
+2026-05-19 23:44:35,334 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=3 | Status: 200
+2026-05-19 23:44:35,341 [WARNING] Page 3: No item container found (ul.list-books).
+2026-05-19 23:44:35,341 [DEBUG] Progress saved: last_page_completed=3, total_rows=20
+2026-05-19 23:44:35,341 [DEBUG] Sleeping 1.13s before next page.
+2026-05-19 23:44:36,477 [INFO] Processing page 4/10: http://openlibrary.org/trending/now?page=4
+2026-05-19 23:44:36,903 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=4 | Status: 200
+2026-05-19 23:44:36,912 [WARNING] Page 4: No item container found (ul.list-books).
+2026-05-19 23:44:36,912 [DEBUG] Progress saved: last_page_completed=4, total_rows=20
+2026-05-19 23:44:36,913 [DEBUG] Sleeping 1.62s before next page.
+2026-05-19 23:44:38,540 [INFO] Processing page 5/10: http://openlibrary.org/trending/now?page=5
+2026-05-19 23:44:38,997 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=5 | Status: 200
+2026-05-19 23:44:39,007 [WARNING] Page 5: No item container found (ul.list-books).
+2026-05-19 23:44:39,007 [DEBUG] Progress saved: last_page_completed=5, total_rows=20
+2026-05-19 23:44:39,007 [DEBUG] Sleeping 1.58s before next page.
+2026-05-19 23:44:40,596 [INFO] Processing page 6/10: http://openlibrary.org/trending/now?page=6
+2026-05-19 23:44:41,034 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=6 | Status: 200
+2026-05-19 23:44:41,053 [WARNING] Page 6: No item container found (ul.list-books).
+2026-05-19 23:44:41,053 [DEBUG] Progress saved: last_page_completed=6, total_rows=20
+2026-05-19 23:44:41,053 [DEBUG] Sleeping 1.12s before next page.
+2026-05-19 23:44:42,180 [INFO] Processing page 7/10: http://openlibrary.org/trending/now?page=7
+2026-05-19 23:44:42,607 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=7 | Status: 200
+2026-05-19 23:44:42,625 [WARNING] Page 7: No item container found (ul.list-books).
+2026-05-19 23:44:42,626 [DEBUG] Progress saved: last_page_completed=7, total_rows=20
+2026-05-19 23:44:42,626 [DEBUG] Sleeping 1.85s before next page.
+2026-05-19 23:44:44,479 [INFO] Processing page 8/10: http://openlibrary.org/trending/now?page=8
+2026-05-19 23:44:44,924 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=8 | Status: 200
+2026-05-19 23:44:44,942 [WARNING] Page 8: No item container found (ul.list-books).
+2026-05-19 23:44:44,946 [DEBUG] Progress saved: last_page_completed=8, total_rows=20
+2026-05-19 23:44:44,946 [DEBUG] Sleeping 1.79s before next page.
+2026-05-19 23:44:46,736 [INFO] Processing page 9/10: http://openlibrary.org/trending/now?page=9
+2026-05-19 23:44:47,177 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=9 | Status: 200
+2026-05-19 23:44:47,210 [WARNING] Page 9: No item container found (ul.list-books).
+2026-05-19 23:44:47,211 [DEBUG] Progress saved: last_page_completed=9, total_rows=20
+2026-05-19 23:44:47,211 [DEBUG] Sleeping 1.60s before next page.
+2026-05-19 23:44:48,818 [INFO] Processing page 10/10: http://openlibrary.org/trending/now?page=10
+2026-05-19 23:44:49,252 [INFO] Fetched URL: http://openlibrary.org/trending/now?page=10 | Status: 200
+2026-05-19 23:44:49,270 [WARNING] Page 10: No item container found (ul.list-books).
+2026-05-19 23:44:49,271 [DEBUG] Progress saved: last_page_completed=10, total_rows=20
+2026-05-19 23:44:49,271 [INFO] Scraping complete. Total rows written: 20
+2026-05-19 23:44:49,271 [INFO] CSV file closed.
+2026-05-19 23:44:49,272 [DEBUG] Progress saved: last_page_completed=10, total_rows=20

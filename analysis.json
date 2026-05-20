@@ -1,0 +1,88 @@
+{
+  "page_type": "trending/listing",
+  "description": "Open Library trending books page showing recently added books to community bookshelves, with book covers, titles, authors, series info, edition counts, and availability status.",
+  "items": {
+    "container_selector": "ul.list-books",
+    "item_selector": "ul.list-books li.searchResultItem",
+    "fields": [
+      {
+        "name": "title",
+        "selector": "h3.booktitle a.results",
+        "attribute": null,
+        "description": "The title of the book"
+      },
+      {
+        "name": "title_link",
+        "selector": "h3.booktitle a.results",
+        "attribute": "href",
+        "description": "Relative URL to the book's work page with edition key"
+      },
+      {
+        "name": "author",
+        "selector": "span.bookauthor a",
+        "attribute": null,
+        "description": "Author name(s) of the book"
+      },
+      {
+        "name": "author_link",
+        "selector": "span.bookauthor a",
+        "attribute": "href",
+        "description": "Relative URL to the author's page"
+      },
+      {
+        "name": "series_name",
+        "selector": "span.bookseries a",
+        "attribute": null,
+        "description": "Series name if the book belongs to a series"
+      },
+      {
+        "name": "series_position",
+        "selector": "span.bookseries__position",
+        "attribute": null,
+        "description": "Position within the series (e.g. Book 1)"
+      },
+      {
+        "name": "cover_image",
+        "selector": "span.bookcover img",
+        "attribute": "src",
+        "description": "URL of the book cover image"
+      },
+      {
+        "name": "first_published",
+        "selector": "span.resultDetails span:first-child",
+        "attribute": null,
+        "description": "Year the book was first published"
+      },
+      {
+        "name": "editions_count",
+        "selector": "span.resultDetails span a:first-of-type",
+        "attribute": null,
+        "description": "Number of editions available"
+      },
+      {
+        "name": "activity_timestamp",
+        "selector": "div.details",
+        "attribute": null,
+        "description": "Text indicating when someone last marked activity on the book (e.g. 'Someone marked as Want to Read 40 seconds ago')"
+      },
+      {
+        "name": "cta_button_text",
+        "selector": "div.searchResultItemCTA .cta-btn",
+        "attribute": null,
+        "description": "Primary call-to-action button label (e.g. Read, Borrow, Locate, Preview Only, Checked Out)"
+      },
+      {
+        "name": "cta_button_link",
+        "selector": "div.searchResultItemCTA .cta-btn",
+        "attribute": "href",
+        "description": "URL for the primary call-to-action button"
+      }
+    ],
+    "sample_count": 19
+  },
+  "pagination": {
+    "type": "page_numbers",
+    "selector_or_pattern": "ol-pagination",
+    "notes": "Pagination is handled by a custom web component <ol-pagination> with attributes current-page='1' and total-pages='10'. URL pattern likely follows /trending/now?page={n}"
+  }
+}
